@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Todo from 'todo';
 import Home from 'home';
-import Join from 'join';
-import Login from 'login';
+import Join from 'auth/join';
+import Login from 'auth/login';
 
 export default function Router() {
   return (
