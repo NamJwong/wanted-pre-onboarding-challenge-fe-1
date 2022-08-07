@@ -12,6 +12,8 @@ interface AuthFormProps {
   password: {
     value: string;
     onChange: (newValue: string) => void;
+    errorMessage?: string;
+    isValid?: boolean;
   };
 }
 
@@ -27,6 +29,7 @@ export default function AuthForm(props: AuthFormProps) {
         onChange={password.onChange}
         width="150px"
       />
+      {password.isValid || <StErrorMessage>{password.errorMessage}</StErrorMessage>}
       <StButton>완료</StButton>
     </Form>
   );
