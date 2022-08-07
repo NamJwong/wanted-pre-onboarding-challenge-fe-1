@@ -5,7 +5,11 @@ const GlobalStyle = createGlobalStyle`
   ${reset};
   html,
   body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 100vw;
+    min-height: 100%;
     margin: 0 auto;
   }
   

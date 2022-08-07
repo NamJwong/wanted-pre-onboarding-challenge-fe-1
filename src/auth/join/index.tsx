@@ -1,4 +1,5 @@
 import AuthForm from 'auth/AuthForm';
+import { StTitle } from 'auth/style';
 import useInput from 'common/hooks/useInput';
 
 export default function Join() {
@@ -6,7 +7,7 @@ export default function Join() {
   const { value: password, onChange: onChangePassword } = useInput('');
   return (
     <div>
-      <h1>회원가입</h1>
+      <StTitle>회원가입</StTitle>
       <AuthForm
         email={{ value: email, onChange: onChangeEmail }}
         password={{ value: password, onChange: onChangePassword }}

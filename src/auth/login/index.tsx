@@ -1,4 +1,5 @@
 import AuthForm from 'auth/AuthForm';
+import { StTitle } from 'auth/style';
 import useInput from 'common/hooks/useInput';
 
 export default function Login() {
@@ -6,7 +7,7 @@ export default function Login() {
   const { value: password, onChange: onChangePassword } = useInput('');
   return (
     <div>
-      <h1>로그인</h1>
+      <StTitle>로그인</StTitle>
       <AuthForm
         email={{ value: email, onChange: onChangeEmail }}
         password={{ value: password, onChange: onChangePassword }}
