@@ -16,10 +16,14 @@ interface AuthFormProps {
     errorMessage?: string;
     isValid?: boolean;
   };
+  submit: {
+    onSubmit: () => void;
+    isLoading: boolean;
+  };
 }
 
 export default function AuthForm(props: AuthFormProps) {
-  const { email, password } = props;
+  const { email, password, submit } = props;
   const [disabledButton, setDisabledButton] = useState(true);
 
   useEffect(() => {
@@ -48,7 +52,7 @@ export default function AuthForm(props: AuthFormProps) {
       {password.errorMessage && !password.isValid && (
         <StErrorMessage>{password.errorMessage}</StErrorMessage>
       )}
-      <StButton disabled={disabledButton} onClick={() => console.log('click')}>
+      <StButton disabled={submit.isLoading && disabledButton} onClick={submit.onSubmit}>
         완료
       </StButton>
     </Form>
