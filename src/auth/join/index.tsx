@@ -2,7 +2,7 @@ import { useMutation } from '@tanstack/react-query';
 import AuthForm from 'auth/AuthForm';
 import { StTitle } from 'auth/style';
 import useInput from 'common/hooks/useInput';
-import useToken from 'common/hooks/useToken';
+import useAuth from 'common/hooks/useAuth';
 import { postJoin } from 'common/services/auth';
 import { useNavigate } from 'react-router-dom';
 
@@ -15,7 +15,7 @@ export default function Join() {
     onChange: onChangePassword,
     isValid: isValidPassword,
   } = useInput('', passwordReg);
-  const { saveToken } = useToken();
+  const { saveToken } = useAuth();
   const navigate = useNavigate();
 
   // 회원가입 실패 에러 처리 해야 함.

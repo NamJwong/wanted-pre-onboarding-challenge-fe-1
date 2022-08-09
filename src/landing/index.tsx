@@ -1,14 +1,16 @@
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 export default function Landing() {
+  const navigate = useNavigate();
   return (
     <StLanding>
       <h1>
         안녕하세요! <br />
         <a href="https://github.com/NamJwong">NamJwong</a>이 만든 투두리스트 앱입니다.
       </h1>
-      <button>로그인</button>
-      <button>회원가입</button>
+      <button onClick={() => navigate('/login')}>로그인</button>
+      <button onClick={() => navigate('/join')}>회원가입</button>
     </StLanding>
   );
 }

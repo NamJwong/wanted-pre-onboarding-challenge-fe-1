@@ -1,4 +1,4 @@
-import Router from 'common/components/Router';
+import Router from 'common/components/routes/Router';
 import GlobalStyle from 'common/styles/global';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { RecoilRoot } from 'recoil';
