@@ -3,10 +3,11 @@ import styled from 'styled-components';
 
 export default function Form({ children }: { children: ReactNode }) {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => e.preventDefault();
-  return <StForm onSubmit={onSubmit}>{children}</StForm>;
+  return <Styled.Form onSubmit={onSubmit}>{children}</Styled.Form>;
 }
-
-const StForm = styled.form`
-  display: flex;
-  flex-direction: column;
-`;
+const Styled = {
+  Form: styled.form`
+    display: flex;
+    flex-direction: column;
+  `,
+};
