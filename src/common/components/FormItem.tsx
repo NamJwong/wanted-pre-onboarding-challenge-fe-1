@@ -11,13 +11,15 @@ interface FormItemProps {
 export default function FormItem(props: FormItemProps) {
   const { label, value, onChange, width = '100%' } = props;
   return (
-    <StFormItem width={width}>
+    <Styled.FormItem width={width}>
       <div>{label}</div>
       <Input value={value} onChange={onChange} />
-    </StFormItem>
+    </Styled.FormItem>
   );
 }
 
-const StFormItem = styled.div<{ width: string }>`
-  width: ${(props) => props.width};
-`;
+const Styled = {
+  FormItem: styled.div<{ width: string }>`
+    width: ${(props) => props.width};
+  `,
+};

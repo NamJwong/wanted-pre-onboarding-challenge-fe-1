@@ -8,9 +8,11 @@ interface InputProps {
 
 export default function Input(props: InputProps) {
   const { value, onChange, width = '100%' } = props;
-  return <StInput value={value} onChange={(e) => onChange(e.target.value)} width={width} />;
+  return <Styled.Input value={value} onChange={(e) => onChange(e.target.value)} width={width} />;
 }
 
-const StInput = styled.input<{ width: string }>`
-  width: ${(props) => props.width};
-`;
+const Styled = {
+  Input: styled.input<{ width: string }>`
+    width: ${(props) => props.width};
+  `,
+};

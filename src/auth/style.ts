@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
-export const StTitle = styled.h1`
-  margin-bottom: 10px;
-`;
+export const Styled = {
+  Title: styled.h1`
+    margin-bottom: 10px;
+  `,
+};

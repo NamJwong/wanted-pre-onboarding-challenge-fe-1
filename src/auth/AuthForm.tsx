@@ -41,7 +41,7 @@ export default function AuthForm(props: AuthFormProps) {
     <Form>
       <FormItem label="이메일" value={email.value} onChange={email.onChange} width="150px" />
       {email.errorMessage && !email.isValid && (
-        <StErrorMessage>{email.errorMessage}</StErrorMessage>
+        <Styled.ErrorMessage>{email.errorMessage}</Styled.ErrorMessage>
       )}
       <FormItem
         label="비밀번호"
@@ -50,20 +50,21 @@ export default function AuthForm(props: AuthFormProps) {
         width="150px"
       />
       {password.errorMessage && !password.isValid && (
-        <StErrorMessage>{password.errorMessage}</StErrorMessage>
+        <Styled.ErrorMessage>{password.errorMessage}</Styled.ErrorMessage>
       )}
-      <StButton disabled={submit.isLoading && disabledButton} onClick={submit.onSubmit}>
+      <Styled.Button disabled={submit.isLoading && disabledButton} onClick={submit.onSubmit}>
         완료
-      </StButton>
+      </Styled.Button>
     </Form>
   );
 }
 
-const StButton = styled.button`
-  margin-top: 10px;
-  width: 150px;
-`;
-
-const StErrorMessage = styled.div`
-  color: red;
-`;
+const Styled = {
+  Button: styled.button`
+    margin-top: 10px;
+    width: 150px;
+  `,
+  ErrorMessage: styled.div`
+    color: red;
+  `,
+};

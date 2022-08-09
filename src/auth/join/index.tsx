@@ -1,6 +1,6 @@
 import { useMutation } from '@tanstack/react-query';
 import AuthForm from 'auth/AuthForm';
-import { StTitle } from 'auth/style';
+import { Styled } from 'auth/style';
 import useInput from 'common/hooks/useInput';
 import useAuth from 'common/hooks/useAuth';
 import { postJoin } from 'common/services/auth';
@@ -28,7 +28,7 @@ export default function Join() {
 
   return (
     <div>
-      <StTitle>회원가입</StTitle>
+      <Styled.Title>회원가입</Styled.Title>
       <AuthForm
         email={{
           value: email,

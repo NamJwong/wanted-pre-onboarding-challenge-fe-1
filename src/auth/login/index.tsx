@@ -1,6 +1,6 @@
 import { useMutation } from '@tanstack/react-query';
 import AuthForm from 'auth/AuthForm';
-import { StTitle } from 'auth/style';
+import { Styled } from 'auth/style';
 import useInput from 'common/hooks/useInput';
 import useAuth from 'common/hooks/useAuth';
 import { postLogin } from 'common/services/auth';
@@ -22,7 +22,7 @@ export default function Login() {
 
   return (
     <div>
-      <StTitle>로그인</StTitle>
+      <Styled.Title>로그인</Styled.Title>
       <AuthForm
         email={{ value: email, onChange: onChangeEmail }}
         password={{ value: password, onChange: onChangePassword }}
